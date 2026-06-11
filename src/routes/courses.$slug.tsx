@@ -40,7 +40,7 @@ export const Route = createFileRoute("/courses/$slug")({
 });
 
 function CourseDetails() {
-  const { course } = Route.useLoaderData();
+  const { course } = Route.useLoaderData() as { course: import("@/data/courses").Course };
 
   return (
     <div>
